@@ -13,6 +13,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+console.log("hello world");
+
 app.use(
   cors({
     origin: "http://localhost:5173",
