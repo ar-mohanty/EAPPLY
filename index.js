@@ -14,13 +14,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.status(200).send("Welcome to the server final.");
+  res.status(200).send("Welcome to the server cors changed.");
 });
 
 app.use(
   cors({
-    origin: "*",
-    allowedHeaders: "*",
+    origin: "https://eapply-client.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
