@@ -4,6 +4,7 @@ const GithubStrategy = require("passport-github2").Strategy;
 
 const passport = require("passport");
 
+const GITHUB_CALLBACK_URL = `${process.env.CLIENT_URL}/auth/github/callback`;
 console.log(process.env.GOOGLE_CLIENT_ID);
 
 passport.use(
@@ -24,7 +25,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "/auth/github/callback",
+      callbackURL: GITHUB_CALLBACK_URL,
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
