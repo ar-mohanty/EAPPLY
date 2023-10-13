@@ -14,7 +14,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.status(200).send("Welcome to the server cors changed.");
+  res.header('Access-Control-Allow-Origin', 'https://eapply-client.vercel.app');
+  res.status(200).send("Welcome to the server allow cors changed.");
 });
 
 app.use(
