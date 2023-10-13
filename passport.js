@@ -24,7 +24,7 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "https://eapply-backend.vercel.app/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
