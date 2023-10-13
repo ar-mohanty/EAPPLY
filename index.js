@@ -13,7 +13,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-console.log("hello world");
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to the server.");
+});
+
 
 app.use(
   cors({
