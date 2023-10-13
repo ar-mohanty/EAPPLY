@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: "https://eapply-client.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
