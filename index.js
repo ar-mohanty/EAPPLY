@@ -14,7 +14,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.status(200).send("Welcome to the server.");
+  res.status(200).send("Welcome to the server final.");
 });
 
 app.use(
