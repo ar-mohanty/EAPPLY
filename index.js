@@ -17,10 +17,10 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to the server.");
 });
 
-
 app.use(
   cors({
     origin: "*",
+    allowedHeaders: "*",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
