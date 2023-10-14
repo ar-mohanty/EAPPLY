@@ -10,9 +10,10 @@ passport.use(
     {
       clientID: process.env['GOOGLE_CLIENT_ID'],
       clientSecret: process.env['GOOGLE_CLIENT_SECRET'],
-      callbackURL: "https://eapply-backend.vercel.app/auth/google/callback",
+      callbackURL: "/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
+      console.log(profile);
       done(null, profile);
     }
   )
@@ -23,7 +24,7 @@ passport.use(
     {
       clientID: process.env['GITHUB_CLIENT_ID'],
       clientSecret: process.env['GITHUB_CLIENT_SECRET'],
-      callbackURL: "https://eapply-backend.vercel.app/auth/github/callback",
+      callbackURL: "/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
