@@ -17,13 +17,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to the server * cors changed.");
 });
 
-app.use(
-  cors({
-    origin: process.env['CLIENT_URL'],
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use("/auth", authRoute);
 
