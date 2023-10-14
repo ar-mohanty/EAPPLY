@@ -19,9 +19,11 @@ app.get("/", (req, res) => {
 
 app.use(
   cors({
-    origin: "*", // Set the correct origin
-    methods: "GET, POST, PUT, DELETE",
-    credentials: true,
+    'origin': "*", // Set the correct origin
+    'methods': "GET, POST, PUT, DELETE",
+    'credentials': true,
+    'preflightContinue': false,
+    'optionsSuccessStatus': 204,
   })
 );
 
