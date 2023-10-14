@@ -14,7 +14,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.set('Access-Control-Allow-Origin', '*');
   res.status(200).send("Welcome to the server * cors changed.");
 });
 
