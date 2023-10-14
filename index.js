@@ -14,7 +14,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.header("Access-Control-Allow-Credentials", "true");
   res.status(200).send("Welcome to the server * cors true changed.");
 });
 
