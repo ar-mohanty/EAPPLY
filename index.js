@@ -17,7 +17,11 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to the server * cors changed.");
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://eapply-client.vercel.app",
+  })
+);
 
 app.use("/auth", authRoute);
 
